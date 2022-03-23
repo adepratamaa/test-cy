@@ -5,8 +5,9 @@ describe('example to-do app', () => {
   
     it('go to help', () => {
         cy.get(':nth-child(5) > .sc-gZMcBi').click()
-        cy.intercept('GET', 'https://support.flip.id/hc/id').as('getComment')
-        // cy.get(':nth-child(2) > iframe').click()
+        cy.intercept({method: 'GET', url: 'https://hcaptcha.com/checksiteconfig?v=597d171&host=support.flip.id&sitekey=33f96e6a-38cd-421b-bb68-7806e1764460&sc=1&swa=1'}).as('helpUrl')
+        cy.wait('@helpUrl');
+        cy.get(':nth-child(2) > iframe').click()
     })
   
     // it('can add new todo items', () => {
