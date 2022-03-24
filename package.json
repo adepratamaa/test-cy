@@ -21,6 +21,7 @@
     "@hcaptcha/vue-hcaptcha": "^0.3.2",
     "@hcaptcha/vue3-hcaptcha": "^1.0.1",
     "cypress": "^9.5.2",
-    "hcaptcha": "^0.1.1"
+    "hcaptcha": "^0.1.1",
+    "webpack": "^5.70.0"
   }
 }
