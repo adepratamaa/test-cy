@@ -1,4 +1,12 @@
 {
     "pageLoadTimeout":100000,
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+    "screenshotOnRunFailure": true,
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "charts": false,
+        "reportPageTitle": "report:",
+        "embeddedScreenshots": true 
+      }
 }
