@@ -1,0 +1,26 @@
+describe('test', function (){
+
+    before(function (){
+        cy.visit('https://autobahn.security/')
+    })
+    it('create new acc', function(){
+        cy.get('#cookiescript_accept').click()
+        cy.get('#cookiescript_wrapper').should('not.be.visible')
+        // cy.wait(2000)
+        cy.get('#CTA_trial_nav').click()
+        cy.get('.navigation-link.border-left.w-nav-link').should('contain', 'Login').click()
+        cy.get('a[href$="signup"]').click()
+        cy.get('[name="email"]').type('xlcvlrawiogm@candassociates.com')
+        cy.get('[name="password"]').type('Test1234Kamaguchi!')
+        cy.get('.button-text.paragraph.button-large').click()
+        cy.get('[name="first-name"]').type('Ade')
+        cy.get('[name="last-name"]').type('Pratama')
+        cy.get('[name="industry"]').type('Hardware')
+        cy.get('[id="item-1"]').click()
+        cy.get('[role="combobox"]').click()
+        cy.get('[id="country-listbox"]').should('be.visible').scrollTo('0%', '41%')
+        cy.get('[data-country-code="id"]').click()
+        cy.get('[name="phone-number"]').type('8234465789')
+        cy.get('.button-text.paragraph.button-large').click()
+    })
+})
