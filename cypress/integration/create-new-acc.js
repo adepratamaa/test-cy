@@ -15,7 +15,7 @@ describe('test', function (){
         cy.get('.button-text.paragraph.button-large').click()
         cy.get('[name="first-name"]').type('Ade')
         cy.get('[name="last-name"]').type('Pratama')
-        cy.get('[name="industry"]').type('Hardware')
+        cy.get('[name="industry"]')
         cy.get('[id="item-1"]').click()
         cy.get('[role="combobox"]').click()
         cy.get('[id="country-listbox"]').should('be.visible').scrollTo('0%', '41%')
